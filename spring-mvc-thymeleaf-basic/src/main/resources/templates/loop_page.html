@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Iteration page</h1>
+    <ul>
+        <li data-th-each="color : ${colors}" data-th-text="${color}">Color</li>
+    </ul>
+
+    <p>Colors in table:</p>
+    <table border="1">
+        <tr data-th-each="color, it : ${colors}">
+            <td data-th-text="${it.index}"></td>
+            <td data-th-text="${color}">Color</td>
+        </tr>
+    </table>
+</body>
+</html>

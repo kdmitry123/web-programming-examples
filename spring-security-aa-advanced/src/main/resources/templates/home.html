@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+    <h1>
+        Hello <span data-sec-authentication="name"></span>
+    </h1>
+    <div data-sec-authorize="hasRole('ROLE_ADMIN')">
+        <a data-th-href="@{/root}">Administration page</a>
+    </div>
+    <form data-th-action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out">
+    </form>
+</body>
+</html>
